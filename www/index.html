@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="framework7/framework7-bundle.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/framework7-icons.css">
+</head>
+
+<body>
+    <!-- App root element -->
+    <div id="app">
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Initial Page, "data-name" contains page name -->
+            <div class="page">
+                <div class="navbar">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner sliding">
+                        <div class="left">
+                        </div>
+                        <div class="title">Tabbar</div>
+                    </div>
+                </div>
+                <div class="toolbar tabbar toolbar-bottom">
+                    <div class="toolbar-inner"><a href="#tab-1" class="tab-link tab-link-active"><i
+                                class="f7-icons">ellipses_bubble_fill</i></a>
+                        <a href="#tab-2" class="tab-link"><i class="f7-icons">mic_fill</i></a>
+                        <a href="#tab-3" class="tab-link"><i class="f7-icons">gear_alt_fill</i></a>
+                    </div>
+                </div>
+                <div class="tabs">
+                    <div class="page-content tab tab-active" id="tab-1">
+                        <div class="block">
+                            <p class="text-align-center"><b>Text conversation(<span class="language">English</span>)</b>
+                            </p>
+                            <div id="conversation" class="text-align-center">
+                                <iframe allow="microphone;" width="350" height="430"
+                                    src="https://console.dialogflow.com/api-client/demo/embedded/5c1339fa-b358-4dd2-a825-ddb629d09e04">
+                                </iframe>
+                            </div>
+                            <div id="message-area" class="row no-gap" style="display: none;">
+                                <input id="text-input" class="col-90" type="text"
+                                    placeholder="Type your question here..." />
+                                <a class="f7-icons col-10"><i>arrow_up_circle_fill</i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content tab" id="tab-2">
+                        <div class="block text-align-center">
+                            <p><b>Voice conversation(<span class="language">English</span>)</b></p>
+                        </div>
+                    </div>
+                    <div class="page-content tab" id="tab-3">
+                        <div class="block">
+                            <p class="text-align-center"><b>Language configuration</b></p>
+                            <p id="selected-language">Selected language: <span class="language">English</span></p>
+                            <div class="block-header">Currently available languages:</div>
+                            <div class="list">
+                                <ul>
+                                    <li>
+                                        <label class="item-radio item-radio-icon-end item-content">
+                                            <input type="radio" name="language-selection" value="english"
+                                                onclick="changeLanguage('English')" checked />
+                                            <i class="icon icon-radio"></i>
+                                            <div class="item-inner">
+                                                <div class="item-title">English</div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="item-radio item-radio-icon-end item-content">
+                                            <input type="radio" name="language-selection" value="japanese"
+                                                onclick="changeLanguage('Japanese')" />
+                                            <i class="icon icon-radio"></i>
+                                            <div class="item-inner">
+                                                <div class="item-title">Japanese</div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="framework7/framework7-bundle.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="./app.js"></script>
+    <script type="module" src="./dialogflow.js"></script>
+</body>
+</html>

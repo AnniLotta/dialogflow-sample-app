@@ -1,0 +1,13 @@
+#message-area {
+    position: fixed;
+    bottom: 70px;
+    width: 95%;
+    align-items: center;
+}
+
+#text-input {
+    border-style: solid;
+    border-color: rgba(204, 204, 204, 0.5);
+    border-width: 2px;
+    padding: 8px;
+}
