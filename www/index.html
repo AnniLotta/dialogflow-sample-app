@@ -31,7 +31,7 @@
                     <div class="navbar-inner sliding">
                         <div class="left">
                         </div>
-                        <div class="title">Tabbar</div>
+                        <div class="title">Dialogflow sample app</div>
                     </div>
                 </div>
                 <div class="toolbar tabbar toolbar-bottom">
@@ -46,16 +46,14 @@
                         <div class="block">
                             <p class="text-align-center"><b>Text conversation(<span class="language">English</span>)</b>
                             </p>
-                            <div id="conversation" class="text-align-center">
-                                <iframe allow="microphone;" width="350" height="430"
-                                    src="https://console.dialogflow.com/api-client/demo/embedded/5c1339fa-b358-4dd2-a825-ddb629d09e04">
-                                </iframe>
-                            </div>
-                            <div id="message-area" class="row no-gap" style="display: none;">
+                            <iframe id="conversation" allow="microphone;"
+                                src="https://console.dialogflow.com/api-client/demo/embedded/5c1339fa-b358-4dd2-a825-ddb629d09e04">
+                            </iframe>
+                            <!-- <div id="message-area" class="row no-gap">
                                 <input id="text-input" class="col-90" type="text"
                                     placeholder="Type your question here..." />
                                 <a class="f7-icons col-10"><i>arrow_up_circle_fill</i></a>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                     <div class="page-content tab" id="tab-2">
@@ -102,6 +100,6 @@
     <script type="text/javascript" src="framework7/framework7-bundle.min.js"></script>
     <!-- Path to your app js-->
     <script type="text/javascript" src="./app.js"></script>
-    <script type="module" src="./dialogflow.js"></script>
 </body>
+
 </html>
